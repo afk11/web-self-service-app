@@ -10,10 +10,10 @@
             userData        = '',       
             isAuthenticated = false;
 
-        // Set Access Token to requests
+        // Set Access Token to requests 
         var setAccessToken = function (token) {
             $http.defaults.headers.common['Authorization'] = 'Basic ' + token;
-        }
+        }   
 
         storageService.getObject("user_profile").then(function (data) {
             if (data) {
@@ -52,8 +52,8 @@
         }
 
         //Resource for REST APIs
-        this.doLogin = function(data) {
-            return $resource(BASE_URL +'/self/authentication', data);
+        this.doLogin = function() {
+            return $resource(BASE_URL +'/self/authentication');
         }
 
         this.logout = function() {
@@ -65,12 +65,12 @@
             $state.go('login');
         }
 
-        this.register = function(data) {
-            return $http.post(BASE_URL + '/self/registration',data);
+        this.register = function() {
+            return $http.post(BASE_URL + '/self/registration');
         }
 
-        this.verifyUser = function(data){
-            return $http.post(BASE_URL + '/self/registration/user',data);
+        this.verifyUser = function(){
+            return $http.post(BASE_URL + '/self/registration/user');
         }
 
     }
