@@ -3,7 +3,7 @@
 
   angular.module('selfService')
 
-	.constant("BASE_URL", "https://mobile.openmf.org/fineract-provider/api/v1")
+	.constant("BASE_URL", "https://knab.volcanotek.com/fineract-provider/api/v1")
 
 	.constant('AUTH_EVENTS', {
 		updateUser: 'update-user',
@@ -11,9 +11,9 @@
 		notAuthenticated: 'auth-not-authenticated'
 	})
 
-	.constant("TENANT_IDENTIFIER", "mobile")
-	.constant("Fineract-Platform-TenantId", "mobile")
-  .constant("tenantIdentifier", "mobile")
+	.constant("TENANT_IDENTIFIER", "default")
+	.constant("Fineract-Platform-TenantId", "default")
+  .constant("tenantIdentifier", "default")
 
 	.constant('USER_ROLES', {
 		user: 'USER'
